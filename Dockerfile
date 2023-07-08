@@ -57,5 +57,5 @@ COPY . /app
 # Ensure `editly` binary available in container
 RUN npm link
 
-ENTRYPOINT ["/usr/bin/dumb-init", "--", "xvfb-run", "--server-args", "-screen 0 1280x1024x24 -ac"]
-CMD [ "tail -f /ect/hosts" ]
+# ENTRYPOINT ["/usr/bin/dumb-init", "--", "xvfb-run", "--server-args", "-screen 0 1280x1024x24 -ac"]
+CMD [ "tail -f /var/log/cpus" ]
