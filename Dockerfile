@@ -58,4 +58,4 @@ COPY . /app
 RUN npm link
 
 ENTRYPOINT ["/usr/bin/dumb-init", "--", "xvfb-run", "--server-args", "-screen 0 1280x1024x24 -ac"]
-CMD [ "tail -f /ect/host" ]
+CMD [ "tail -f /ect/hosts" ]
